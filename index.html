@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" ng-app="myStatusApp">
+  <head>
+      <title> Status App </title>
+      <link href="styles.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="node_modules\angular\angular.js"></script>﻿
+      <script src="app.js"> </script>
+  </head>
+
+  <body>
+    <header ng-include="'header.html'"> </header>
+    
+    <table class="table table-bordered table-striped table-hover">
+      <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Application</th>
+        <th scope="col">Company</th>
+        <th scope="col">Status</th>
+        </tr>
+      </thead>
+    <tbody>
+        <tr>
+        <th scope="row">1</th>
+        <td>Form One</td>
+        <td>Test</td>
+        <td>Online <img ng-src="img\Online.png" style="margin: -5px 10px 0 0; float: left; width:50px;" /> </td>
+        </tr>
+        <tr>
+      <th scope="row">2</th>
+        <td>CRADA</td>
+        <td>Test</td>
+        <td>Offline <img ng-src="img\offline.png" style="margin: -5px 10px 0 0; float: left; width:50px;" /></td>
+        </tr>
+        <tr>
+        <th scope="row">3</th>
+        <td>Document Tracker</td>
+        <td>Test</td>
+        <td>Online <img ng-src="img\Online.png" style="margin: -5px 10px 0 0; float: left; width:50px;" /> </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form ng-submit="addApplication()" >
+      <div ng-if="message">{{ message }}</div>
+        <input type="text" placeholder="Application" ng-model="newgamer.name" ng-required="true"/>
+        <input type="text" placeholder="Company" ng-model="newgamer.level" ng-required="true"/>
+        <input type="text" placeholder="Status" ng-model="newgamer.bounty" ng-required="true"/>
+        <input type="submit" value="Add New Application" />
+    </form>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+.grid {
+    width: 585px;
+    margin: 0px auto;
+    height: 130px;
+    text-align: center;
+  }
+
+.titleName{
+  margin: 0px auto;
+  text-align: center;
+}
+
+#menu-bar{
+  background: #0b078e;
+  color: #fff;
+  padding: 10px;
+}
+
+#menu-bar h1{
+  font-size: 24px;
+  font-weight: normal;
+  display: inline-block;
+}
